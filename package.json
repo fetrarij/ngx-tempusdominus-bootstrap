@@ -1,6 +1,6 @@
 {
   "name": "ng-tempusdominus-bootstrap4",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "Angular2+ directive for tempus dominus bootstrap 4 library.",
   "keywords": [
     "angular2",
