@@ -1,0 +1,82 @@
+<h4>
+  Linked datepickers
+</h4>
+<div class="row">
+  <div class="col-sm-3">
+      <div class="form-group">
+          <div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap>
+              <input
+              [(ngModel)]="startDate"
+              (ngModelChange)="update()"
+              [options]="startOptions"
+              NgTempusdominusBootstrapInput
+              type="text" class="form-control"
+              />
+              <div class="input-group-append" NgTempusdominusBootstrapToggle>
+                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-3">
+      <div class="form-group">
+          <div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap>
+              <input
+              class="form-control datetimepicker-input"
+              [(ngModel)]="endDate"
+              (ngModelChange)="update()"
+              [options]="endOptions"
+              NgTempusdominusBootstrapInput
+              type="text" class="form-control"
+              />
+              <div class="input-group-append" NgTempusdominusBootstrapToggle>
+                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h6>Code:</h6>
+    <div class="highlight" id="html1">
+      <pre><code  class="html">&lt;div class="row"&gt;
+      &lt;div class="col-sm-3"&gt;
+          &lt;div class="form-group"&gt;
+              &lt;div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap&gt;
+                  &lt;input
+                  [(ngModel)]="startDate"
+                  (ngModelChange)="update()"
+                  [options]="startOptions"
+                  NgTempusdominusBootstrapInput
+                  type="text" class="form-control"
+                  /&gt;
+                  &lt;div class="input-group-append" NgTempusdominusBootstrapToggle&gt;
+                      &lt;div class="input-group-text"&gt;&lt;i class="fa fa-calendar"&gt;&lt;/i&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="col-sm-3"&gt;
+          &lt;div class="form-group"&gt;
+              &lt;div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap&gt;
+                  &lt;input
+                  class="form-control datetimepicker-input"
+                  [(ngModel)]="endDate"
+                  (ngModelChange)="update()"
+                  [options]="endOptions"
+                  NgTempusdominusBootstrapInput
+                  type="text" class="form-control"
+                  /&gt;
+                  &lt;div class="input-group-append" NgTempusdominusBootstrapToggle&gt;
+                      &lt;div class="input-group-text"&gt;&lt;i class="fa fa-calendar"&gt;&lt;/i&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+      </code></pre>
+    </div>
+  </div>
+</div>
