@@ -20,6 +20,14 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
+    files: [
+      '../../node_modules/bootstrap/dist/css/bootstrap.min.css',
+      '../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
+      '../../node_modules/jquery/dist/jquery.min.js',
+      '../../node_modules/bootstrap/dist/js/bootstrap.min.js',
+      '../../node_modules/moment/min/moment.min.js',
+      '../../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js'
+    ],
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
