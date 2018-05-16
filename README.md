@@ -1,27 +1,90 @@
-# NgTempusdominusBootstrap4
+# Angular Tempus Dominus Bootstrap 4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+# About
+This is an angular wrapper for the Bootstrap 4 datepicker:  "Tempus Dominus" version 5.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This version depends on the current version of tempus dominus bootstrap wich is in development, so this wrapper could have a lot of change in future.
 
-## Code scaffolding
+# Installation
+1) Install the directive via npm
+```javascript
+npm install ng-tempusdominus-bootstrap4 --save
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2) Install & Include dependent libraries in your application:
+    * jquery.js, 
+    * bootstrap (.js & .css),
+    * tempusdominus bootstrap 4 (.js & .css),
+    * moment.
+     
+        <details>
+            <summary>
+            An example configuration for Angular-cli project with Angular 2, 4, and 5.
+            </summary>
+            In `.angular-cli.json` file:
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+        ```json 
+            "styles": [
+            "styles.css",
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"
+            ],
+            "scripts": [
+            "../node_modules/jquery/dist/jquery.min.js",
+            "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "../node_modules/moment/min/moment.min.js",
+            "../node_modules/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"
+            ],
+        ```
+        </details>
 
-## Running unit tests
+3) Add the `NgTempusdominusBootstrapModule` module import in your module.:
+```javascript
+import { NgTempusdominusBootstrapModule } from 'ng-tempusdominus-bootstrap4';
+import { FormsModule } from '@angular/forms';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  imports: [
+    ...
+    FormsMoudle,
+    NgTempusdominusBootstrapModule,
+    ...
+  ]
+})
+export class SomeModule {}
+```
 
-## Running end-to-end tests
+4) Start using!
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+# Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Input group: (there are 3 directive you shoud use: `NgTempusdominusBootstrap`, `NgTempusdominusBootstrapInput`, and `NgTempusdominusBootstrapToggle`)
+```html
+<div class="form-group">
+    <div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap>
+        <input
+        [(ngModel)]="startDate"
+        (ngModelChange)="update()"
+        [options]="startOptions"
+        NgTempusdominusBootstrapInput
+        type="text" class="form-control"
+        />
+        <div class="input-group-append" NgTempusdominusBootstrapToggle>
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        </div>
+    </div>
+</div>
+```
+Input Only: (use: `NgTempusdominusBootstrapInput`)
+```html
+<input
+    class="form-control datetimepicker-input"
+    [(ngModel)]="date"
+    [options]="options"
+    NgTempusdominusBootstrapInput
+    type="text" class="form-control"
+/>
+```

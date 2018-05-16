@@ -1,17 +1,43 @@
 {
   "name": "ng-tempusdominus-bootstrap4",
   "version": "0.0.0",
+  "description": "Angular2+ directive for tempus dominus bootstrap 4 library.",
+  "keywords": [
+    "angular2",
+    "angular4",
+    "angular5",
+    "angular6",
+    "ng2",
+    "datetimepicker",
+    "tempusdominus",
+    "tempus",
+    "dominus",
+    "component",
+    "directive",
+    "wrapper",
+    "bootstrap4",
+    "bootstrap",
+    "picker"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ngc": "./node_modules/.bin/ngc -p tsconfig.json",
+    "build": "ng-packagr -p package.json",
+    "gh-pages": "./node_modules/.bin/ng build --prod --no-aot --base-href=\"/ng-tempusdominus-bootstrap4/\" && ngh --dir demo/dist"
   },
-  "private": true,
-  "dependencies": {
-    "bootstrap": "4.0.0",
+  "homepage": "https://github.com/fetrarij/ng-tempusdominus-bootstrap4",
+  "license": "MIT",
+  "author": "Fetrarijaona R.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fetrarij/ng-tempusdominus-bootstrap4.git"
+  },
+  "peerDependencies": {
+    "bootstrap": "^4.0.0",
     "tempusdominus-core": "^5.0.0-alpha17",
     "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
     "jquery": "^3.0",
@@ -36,21 +62,37 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.5.2",
+    "bootstrap": "^4.0.0",
     "codelyzer": "~4.2.1",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
+    "jquery": "^3.0",
     "karma": "~1.7.1",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~1.4.2",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "moment": "^2.17",
+    "moment-timezone": "^0.5.11",
+    "ng-packagr": "^2.4.4",
+    "popper.js": "^1.12.9",
     "protractor": "~5.3.0",
     "rxjs": "^6.0.0",
+    "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
+    "tempusdominus-core": "^5.0.0-alpha17",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2",
     "zone.js": "^0.8.26"
+  },
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    },
+    "dest": "dist"
   }
 }
