@@ -46,7 +46,7 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
     private dpinitialized: boolean;
     private inputOnly: boolean;
 
-    private dpElement;
+    dpElement;
     private optionsDiffer: KeyValueDiffer<string, any>;
     private _onTouched: any = () => {
     }
@@ -70,6 +70,21 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
     @HostListener('focus') onFocus() {
         if (this.inputOnly) {
             this.dpElement.datetimepicker('toggle');
+        }
+    }
+    /**
+     * For click outside of input, for input only
+     * @param event event object
+     * @param targetElement target element object
+     */
+    @HostListener('document:click', ['$event', '$event.target'])
+    outsideClick(event, targetElement: HTMLElement): void {
+        if (!targetElement || !this.inputOnly) {
+            return;
+        }
+        const clickedInside = this.el.nativeElement.contains(targetElement);
+        if (!clickedInside) {
+            this.dpElement.datetimepicker('hide');
         }
     }
 
@@ -181,8 +196,24 @@ export class NgTempusdominusBootstrapToggleDirective {
 })
 export class NgTempusdominusBootstrapDirective  {
     @ContentChild(NgTempusdominusBootstrapInputDirective) private _input: NgTempusdominusBootstrapInputDirective;
-    constructor(
-    ) {
+    /**
+     * For click outside of container,
+     * @param event event object
+     * @param targetElement target element object
+     */
+    @HostListener('document:click', ['$event', '$event.target'])
+    outsideClick(event, targetElement: HTMLElement): void {
+        if (!targetElement) {
+            return;
+        }
+        const clickedInside = this.el.nativeElement.contains(targetElement);
+        if (!clickedInside) {
+            this._input.dpElement.datetimepicker('hide');
+        }
+    }
+
+
+    constructor(private el: ElementRef) {
     }
     toggle() {
         this._input.toggle();
