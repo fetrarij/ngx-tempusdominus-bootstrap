@@ -12,7 +12,7 @@ This version depends on the current version of tempus dominus bootstrap wich is 
 npm install ng-tempusdominus-bootstrap4 --save
 ```
 
-2) Install & Include dependent libraries in your application:
+2) Install & Include dependents libraries in your application:
     * jquery.js, 
     * bootstrap (.js & .css),
     * tempusdominus bootstrap 4 (.js & .css),
@@ -28,14 +28,15 @@ npm install ng-tempusdominus-bootstrap4 --save
         ```json 
             "styles": [
             "styles.css",
-            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-            "../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"
+                "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "./node_modules/font-awesome/css/font-awesome.css",
+                "./node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
             ],
             "scripts": [
-            "../node_modules/jquery/dist/jquery.min.js",
-            "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-            "../node_modules/moment/min/moment.min.js",
-            "../node_modules/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"
+                "../node_modules/jquery/dist/jquery.min.js",
+                "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+                "../node_modules/moment/min/moment.min.js",
+                "../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js"
             ],
         ```
         </details>
@@ -87,4 +88,18 @@ Input Only: (use: `NgTempusdominusBootstrapInput`)
     NgTempusdominusBootstrapInput
     type="text" class="form-control"
 />
+```
+
+## Parameters
+
+### options
+
+With `options` attribute you can pass an object containing all the required configuration for the tempus dominus v5.
+All the options available in the original library are supported. Check the list of options on official website: https://tempusdominus.github.io/bootstrap-4/Options/
+
+```javascript
+options = {
+    format: "DD.MM.YYYY",
+    maxDate: dateTo
+};
 ```
