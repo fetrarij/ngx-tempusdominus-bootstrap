@@ -79,7 +79,7 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
      */
     @HostListener('document:click', ['$event', '$event.target'])
     outsideClick(event, targetElement: HTMLElement): void {
-        if (!targetElement || !this.inputOnly) {
+        if (!targetElement || !this.inputOnly || this.options.inline) {
             return;
         }
         const clickedInside = this.el.nativeElement.contains(targetElement);
@@ -102,8 +102,11 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
     }
 
     writeValue(value) {
-        if (!value) {
+        // if we have a previous value and current value is falsy
+        // clear the picker
+        if (this._value && !value) {
             this.value = null;
+            this.dpElement.datetimepicker('clear');
         }
         this.value = value;
         this.setDpValue(value);
@@ -123,8 +126,6 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
         }
         if (val) {
             this.dpElement.datetimepicker('date', this.value);
-        } else {
-            this.dpElement.datetimepicker('clear');
         }
     }
     setDisabledState(isDisabled: boolean): void {
