@@ -1,4 +1,5 @@
-# Angular Tempus Dominus Bootstrap 4 [![npm version](https://badge.fury.io/js/ng-tempusdominus-bootstrap4.svg)](https://badge.fury.io/js/ng-tempusdominus-bootstrap4)
+# Angular Tempus Dominus Bootstrap 4 
+[![npm version](https://badge.fury.io/js/ng-tempusdominus-bootstrap4.svg)](https://badge.fury.io/js/ng-tempusdominus-bootstrap4)
 
 # About
 This is an angular wrapper for the Bootstrap 4 datepicker:  "Tempus Dominus" version 5.
@@ -24,9 +25,9 @@ npm install ng-tempusdominus-bootstrap4 --save
 
         <details>
             <summary>
-            An example configuration for Angular-cli project with Angular 2, 4, and 5.
+            Example configuration for Angular-cli project with Angular 2, 4, and 5.
             </summary>
-            In `.angular-cli.json` file:
+            In .angular-cli.json file:
 
 
         ```json 
@@ -85,7 +86,6 @@ Input group: (there are 3 directive you shoud use: `NgTempusdominusBootstrap`, `
 Input Only: (use: `NgTempusdominusBootstrapInput`)
 ```html
 <input
-    class="form-control datetimepicker-input"
     [(ngModel)]="date"
     [options]="options"
     NgTempusdominusBootstrapInput
@@ -93,7 +93,7 @@ Input Only: (use: `NgTempusdominusBootstrapInput`)
 />
 ```
 
-## Parameters
+## Parameters with `NgTempusdominusBootstrapInput`
 
 ### options
 
@@ -103,6 +103,12 @@ All the options available in the original library are supported. Check the list 
 ```javascript
 options = {
     format: "DD.MM.YYYY",
-    maxDate: dateTo
+    maxDate: moment(),
+    minDate: date,
+    // ...
 };
 ```
+
+# Examples
+ * [Our demo here](https://fetrarij.github.io/ng-tempusdominus-bootstrap4/)
+ * [browse our example code](./demo/src/app/)
