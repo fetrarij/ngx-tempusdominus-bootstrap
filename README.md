@@ -33,7 +33,7 @@ npm install ng-tempusdominus-bootstrap4 --save
             "styles": [
                 "styles.css",
                 "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-                "./node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
+                "../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
             ],
             "scripts": [
                 "../node_modules/jquery/dist/jquery.min.js",
