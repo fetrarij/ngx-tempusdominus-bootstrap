@@ -12,6 +12,7 @@ export class SimpleComponent implements OnInit {
   date = null;
   constructor() { }
   ngOnInit() {
+    this.date = moment('2015-11-20T22:10Z');
   }
   addTime(val, selector) {
     this.date = moment(this.date.add(val, selector));

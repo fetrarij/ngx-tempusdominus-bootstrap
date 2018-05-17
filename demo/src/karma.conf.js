@@ -22,7 +22,7 @@ module.exports = function (config) {
     },
     files: [
       '../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-      '../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
+      '../../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css',
       '../../node_modules/jquery/dist/jquery.min.js',
       '../../node_modules/bootstrap/dist/js/bootstrap.min.js',
       '../../node_modules/moment/min/moment.min.js',
