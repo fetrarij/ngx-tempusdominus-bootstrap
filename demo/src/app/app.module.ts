@@ -8,6 +8,7 @@ import { SimpleComponent } from './simple/simple.component';
 import { InputOnlyComponent } from './input-only/input-only.component';
 import { LinkedDatepickersComponent } from './linked-datepickers/linked-datepickers.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { InlineComponent } from './inline/inline.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     SimpleComponent,
     InputOnlyComponent,
     LinkedDatepickersComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    InlineComponent
   ],
   imports: [
     BrowserModule,
