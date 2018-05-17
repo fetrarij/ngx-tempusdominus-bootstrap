@@ -1,3 +1,71 @@
-<p>
-  reactive-forms works!
-</p>
+<h4>
+    With reactive forms
+  </h4>
+  <div class="row">
+    <div class="col-sm-3">
+        <form [formGroup]="form">
+          <div class="form-group">
+              <div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap>
+                  <input
+                    class="form-control"
+                    formControlName="date"
+                    [options]="options"
+                    NgTempusdominusBootstrapInput
+                    type="text"
+                    [ngClass]="{'is-invalid': form.get('date').errors && form.get('date').touched}"
+                  />
+                  <div class="input-group-append" NgTempusdominusBootstrapToggle>
+                      <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                  </div>
+              </div>
+          </div>
+        </form>
+    </div>
+    <div class="col">
+        <button class="btn btn-primary" (click)="reset()">Reset</button> &nbsp;
+        <button class="btn btn-primary" (click)="form.disable()">Disable form</button>&nbsp;
+        <button class="btn btn-primary" (click)="form.enable()">Enable form</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <br>
+        <strong>Form is valid:</strong> {{form.valid}}
+        <br>
+        <strong>Form values:</strong> {{form.value | json}}
+        <br>
+        <strong>start date is touched? </strong> {{form.get('date').touched}}
+        <br>
+        <br/>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-12">
+      <h5>Code:</h5>
+      <div class="highlight" id="html1">
+        <pre><code  class="html">&lt;form [formGroup]="form"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-sm-3"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap&gt;
+                    &lt;input
+                    class="form-control"
+                    formControlName="date"
+                    [options]="options"
+                    NgTempusdominusBootstrapInput
+                    type="text"
+                    /&gt;
+                    &lt;div class="input-group-append" NgTempusdominusBootstrapToggle&gt;
+                        &lt;div class="input-group-text"&gt;&lt;i class="fa fa-calendar"&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+  &lt;/form&gt;
+  
+        </code></pre>
+      </div>
+    </div>
+  </div>
+  

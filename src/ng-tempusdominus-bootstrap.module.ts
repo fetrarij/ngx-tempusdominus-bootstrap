@@ -15,7 +15,7 @@ import {
     declarations: [
         NgTempusdominusBootstrapDirective,
         NgTempusdominusBootstrapToggleDirective,
-        NgTempusdominusBootstrapInputDirective
+        NgTempusdominusBootstrapInputDirective,
     ],
     exports: [
         NgTempusdominusBootstrapDirective,

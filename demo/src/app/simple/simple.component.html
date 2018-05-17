@@ -1,0 +1,62 @@
+<h4>
+  Simple datepicker
+</h4>
+<div class="row">
+  <div class="col-sm-3">
+      <div class="form-group">
+          <div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap>
+              <input
+                class="form-control"
+                [(ngModel)]="date"
+                [options]="options"
+                NgTempusdominusBootstrapInput
+                type="text"
+              />
+              <div class="input-group-append" NgTempusdominusBootstrapToggle>
+                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <button class="btn btn-primary" (click)="getTime()" [disabled]="!date">What's the time?</button>&nbsp;
+      <button class="btn btn-primary" (click)="addTime(1, 'h')" [disabled]="!date">Add +1h</button>&nbsp;
+      <button class="btn btn-primary" (click)="addTime(1, 'd')" [disabled]="!date">Add +1d</button>&nbsp;
+      <button class="btn btn-primary" (click)="addTime(1, 'w')" [disabled]="!date">Add +1w</button>&nbsp;
+      <button class="btn btn-primary" (click)="clearTime()" [disabled]="!date">Clear the time</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+      <strong>Input date: </strong> {{date ? (date.format() | date: 'yyyy/MM/dd HH:mm') : 'N/A'}}
+      <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h5>Code:</h5>
+    <div class="highlight" id="html1">
+      <pre><code  class="html">&lt;div class="row"&gt;
+      &lt;div class="col-sm-3"&gt;
+          &lt;div class="form-group"&gt;
+              &lt;div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap&gt;
+                  &lt;input
+                  class="form-control"
+                  [(ngModel)]="date"
+                  (ngModelChange)="update()"
+                  [options]="options"
+                  NgTempusdominusBootstrapInput
+                  type="text"
+                  /&gt;
+                  &lt;div class="input-group-append" NgTempusdominusBootstrapToggle&gt;
+                      &lt;div class="input-group-text"&gt;&lt;i class="fa fa-calendar"&gt;&lt;/i&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+
+      </code></pre>
+    </div>
+  </div>
+</div>
