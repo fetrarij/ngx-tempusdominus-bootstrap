@@ -1,4 +1,4 @@
-# Angular Tempus Dominus Bootstrap 4
+# Angular Tempus Dominus Bootstrap 4 [![npm version](https://badge.fury.io/js/ng-tempusdominus-bootstrap4.svg)](https://badge.fury.io/js/ng-tempusdominus-bootstrap4)
 
 # About
 This is an angular wrapper for the Bootstrap 4 datepicker:  "Tempus Dominus" version 5.
@@ -17,7 +17,11 @@ npm install ng-tempusdominus-bootstrap4 --save
     * bootstrap (.js & .css),
     * tempusdominus bootstrap 4 (.js & .css),
     * moment.
-     
+    
+        ```
+        npm install jquery bootstrap moment tempusdominus-core tempusdominus-bootstrap-4 --save
+        ```
+
         <details>
             <summary>
             An example configuration for Angular-cli project with Angular 2, 4, and 5.
@@ -27,9 +31,8 @@ npm install ng-tempusdominus-bootstrap4 --save
 
         ```json 
             "styles": [
-            "styles.css",
-                "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-                "./node_modules/font-awesome/css/font-awesome.css",
+                "styles.css",
+                "../node_modules/bootstrap/dist/css/bootstrap.min.css",
                 "./node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
             ],
             "scripts": [
