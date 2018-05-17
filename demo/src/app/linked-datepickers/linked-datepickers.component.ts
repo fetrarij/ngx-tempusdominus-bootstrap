@@ -8,7 +8,7 @@ import * as moment from 'moment';
 })
 export class LinkedDatepickersComponent implements OnInit {
 
-  startDate =  moment('2015-11-18T00:00Z');
+  startDate = moment('2015-11-18T00:00Z');
   endDate = moment('2015-11-20T00:00Z');
   startOptions: any = {format: 'DD.MM.YYYY', locale: 'fr'};
   endOptions: any = {format: 'DD.MM.YYYY'};
