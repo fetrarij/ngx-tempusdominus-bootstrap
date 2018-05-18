@@ -1,5 +1,5 @@
 # Angular Tempus Dominus Bootstrap
-[![npm version](https://badge.fury.io/js/ngx-tempusdominus-bootstrap.svg)](https://badge.fury.io/js/ngx-tempusdominus-bootstrap)
+[![Build Status](https://travis-ci.org/fetrarij/ngx-tempusdominus-bootstrap.svg?branch=master)](https://travis-ci.org/fetrarij/ngx-tempusdominus-bootstrap) [![npm version](https://badge.fury.io/js/ngx-tempusdominus-bootstrap.svg)](https://badge.fury.io/js/ngx-tempusdominus-bootstrap)
 
 # About
 This is an angular wrapper for the Bootstrap datetimepicker:  "Tempus Dominus" v5.
