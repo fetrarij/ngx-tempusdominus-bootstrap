@@ -68,13 +68,13 @@ npm install jquery bootstrap@^3.0.0 moment tempusdominus-core tempusdominus-boot
     "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
+        "../node_modules/tempusdominus-bootstrap-3/build/css/tempusdominus-bootstrap-3.css",
     ],
     "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/moment/min/moment.min.js",
-        "../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js"
+        "../node_modules/tempusdominus-bootstrap-3/build/js/tempusdominus-bootstrap-3.js"
     ],
 ```
 </details>
