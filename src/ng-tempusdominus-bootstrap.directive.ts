@@ -18,7 +18,6 @@ import {
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 declare var $: any;
-import * as datetimepicker from 'tempusdominus-bootstrap-4';
 import * as moment from 'moment';
 
 
@@ -32,17 +31,16 @@ import * as moment from 'moment';
 export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy, DoCheck {
 
     _value: moment.Moment;
-    private _options: datetimepicker.SetOptions = {};
+    private _options: any = {};
     @Input() set options(value) {
       if (value !== null) {
         this._options = value;
       }
     }
-    get options(): datetimepicker.SetOptions {
+    get options() {
         return this._options;
     }
     @Output() click: EventEmitter<any> = new EventEmitter<any>();
-    // datepicker: datetimepicker.Datetimepicker;
     private dpinitialized: boolean;
     private inputOnly: boolean;
 

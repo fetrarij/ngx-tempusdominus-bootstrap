@@ -16,7 +16,7 @@ npm install ng-tempusdominus-bootstrap4 --save
 2) Install & Include dependents libraries in your application:
     * jquery.js, 
     * bootstrap (.js & .css),
-    * tempusdominus bootstrap 4 (.js & .css),
+    * tempusdominus bootstrap 3 (.js & .css),
     * moment.
     
         ```
@@ -34,13 +34,13 @@ npm install ng-tempusdominus-bootstrap4 --save
             "styles": [
                 "styles.css",
                 "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-                "../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
+                "../node_modules/tempusdominus-bootstrap-3/build/css/tempusdominus-bootstrap-3.css",
             ],
             "scripts": [
                 "../node_modules/jquery/dist/jquery.min.js",
                 "../node_modules/bootstrap/dist/js/bootstrap.min.js",
                 "../node_modules/moment/min/moment.min.js",
-                "../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js"
+                "../node_modules/tempusdominus-bootstrap-3/build/js/tempusdominus-bootstrap-3.js"
             ],
         ```
         </details>
@@ -77,7 +77,7 @@ Input group: (there are 3 directive you shoud use: `NgTempusdominusBootstrap`, `
         NgTempusdominusBootstrapInput
         type="text" class="form-control"
         />
-        <div class="input-group-append" NgTempusdominusBootstrapToggle>
+        <div class="input-group-addon" NgTempusdominusBootstrapToggle>
             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
         </div>
     </div>
