@@ -27,14 +27,15 @@
     "e2e": "ng e2e",
     "ngc": "./node_modules/.bin/ngc -p tsconfig.json",
     "build": "ng-packagr -p package.json",
-    "gh-pages": "./node_modules/.bin/ng build --prod --base-href=\"/ng-tempusdominus-bootstrap4/\" && ngh --dir demo/dist/ng-tempusdominus-bootstrap4"
+    "build:demo": "./node_modules/.bin/ng build --prod --base-href=\"/ngx-tempusdominus-bootstrap/\"",
+    "gh-pages": "./node_modules/.bin/ngh --dir  demo/dist/ngx-tempusdominus-bootstrap --repo=https://GH_TOKEN@github.com/fetrarij/ngx-tempusdominus-bootstrap.git"
   },
-  "homepage": "https://github.com/fetrarij/ng-tempusdominus-bootstrap4",
+  "homepage": "https://github.com/fetrarij/ngx-tempusdominus-bootstrap",
   "license": "MIT",
   "author": "Fetrarijaona R.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fetrarij/ng-tempusdominus-bootstrap4.git"
+    "url": "https://github.com/fetrarij/ngx-tempusdominus-bootstrap.git"
   },
   "peerDependencies": {
     "bootstrap": "^3.0.0||^4.0.0",
