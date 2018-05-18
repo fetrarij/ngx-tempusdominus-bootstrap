@@ -1,51 +1,86 @@
-# Angular Tempus Dominus Bootstrap 4 
-[![npm version](https://badge.fury.io/js/ng-tempusdominus-bootstrap4.svg)](https://badge.fury.io/js/ng-tempusdominus-bootstrap4)
+# Angular Tempus Dominus Bootstrap
+[![npm version](https://badge.fury.io/js/ngx-tempusdominus-bootstrap.svg)](https://badge.fury.io/js/ngx-tempusdominus-bootstrap)
 
 # About
-This is an angular wrapper for the Bootstrap 4 datepicker:  "Tempus Dominus" version 5.
+This is an angular wrapper for the Bootstrap datetimepicker:  "Tempus Dominus" v5.
+This wrapper will works with bootstrap 3 and with bootstrap 4.
 
 
 This version depends on the current version of tempus dominus bootstrap wich is in development, so this wrapper could have a lot of change in future.
 
 # Installation
-1) Install the directive via npm
+### Install the directive via npm
+
 ```javascript
-npm install ng-tempusdominus-bootstrap4 --save
+npm install ngx-tempusdominus-bootstrap --save
+```
+### Install required plugin if you didn't installed them yet
+
+
+* jquery.js, 
+* bootstrap (.js & .css),
+* tempusdominus bootstrap 4 (.js & .css),
+* moment.
+
+## For bootstrap 4
+
+    
+```
+npm install jquery bootstrap moment tempusdominus-core tempusdominus-bootstrap-4 --save
+```
+<details>
+    <summary>
+    Example configuration for Angular-cli project with Angular 2, 4, and 5.
+    </summary>
+    In .angular-cli.json file:
+
+
+```json 
+    "styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
+    ],
+    "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/moment/min/moment.min.js",
+        "../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js"
+    ],
+```
+</details>
+
+## For bootstrap 3
+
+    
+```
+npm install jquery bootstrap@^3.0.0 moment tempusdominus-core tempusdominus-bootstrap-3 --save
 ```
 
-2) Install & Include dependents libraries in your application:
-    * jquery.js, 
-    * bootstrap (.js & .css),
-    * tempusdominus bootstrap 4 (.js & .css),
-    * moment.
-    
-        ```
-        npm install jquery bootstrap moment tempusdominus-core tempusdominus-bootstrap-4 --save
-        ```
-
-        <details>
-            <summary>
-            Example configuration for Angular-cli project with Angular 2, 4, and 5.
-            </summary>
-            In .angular-cli.json file:
+<details>
+    <summary>
+    Example configuration for Angular-cli project with Angular 2, 4, and 5.
+    </summary>
+    In .angular-cli.json file:
 
 
-        ```json 
-            "styles": [
-                "styles.css",
-                "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-                "../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
-            ],
-            "scripts": [
-                "../node_modules/jquery/dist/jquery.min.js",
-                "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-                "../node_modules/moment/min/moment.min.js",
-                "../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js"
-            ],
-        ```
-        </details>
+```json 
+    "styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css",
+    ],
+    "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/moment/min/moment.min.js",
+        "../node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js"
+    ],
+```
+</details>
 
-3) Add the `NgTempusdominusBootstrapModule` module import in your module.:
+# Usage
+ Import the `NgTempusdominusBootstrapModule` module in your module. You need `FormsModule` or `ReactiveModule` like all other form:
 ```javascript
 import { NgTempusdominusBootstrapModule } from 'ng-tempusdominus-bootstrap4';
 import { FormsModule } from '@angular/forms';
@@ -61,12 +96,9 @@ import { FormsModule } from '@angular/forms';
 export class SomeModule {}
 ```
 
-4) Start using!
+In your component html:
 
-
-# Usage
-
-Input group: (there are 3 directive you shoud use: `NgTempusdominusBootstrap`, `NgTempusdominusBootstrapInput`, and `NgTempusdominusBootstrapToggle`)
+* Input group: (there are 3 directive you shoud use: `NgTempusdominusBootstrap`, `NgTempusdominusBootstrapInput`, and `NgTempusdominusBootstrapToggle`)
 ```html
 <div class="form-group">
     <div class="input-group date" data-target-input="nearest" NgTempusdominusBootstrap>
@@ -83,7 +115,7 @@ Input group: (there are 3 directive you shoud use: `NgTempusdominusBootstrap`, `
     </div>
 </div>
 ```
-Input Only: (use: `NgTempusdominusBootstrapInput`)
+* Input Only: (use: `NgTempusdominusBootstrapInput` only)
 ```html
 <input
     [(ngModel)]="date"
@@ -111,4 +143,5 @@ options = {
 
 # Examples
  * [Our demo here](https://fetrarij.github.io/ng-tempusdominus-bootstrap4/)
- * [browse our example code](./demo/src/app/)
+ * [browse our example code](./demo/src/app/) with bootstrap 4
+ * Check the branch `bootstrap-3` for bootstrap 3 sources
