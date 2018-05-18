@@ -19,7 +19,8 @@ npm install ngx-tempusdominus-bootstrap --save
 
 * jquery.js, 
 * bootstrap (.js & .css),
-* tempusdominus bootstrap 4 (.js & .css),
+* tempusdominus core, 
+* tempusdominus bootstrap 3 or 4(.js & .css),
 * moment.
 
 ## For bootstrap 4
@@ -142,6 +143,6 @@ options = {
 ```
 
 # Examples
- * [Our demo here](https://fetrarij.github.io/ng-tempusdominus-bootstrap4/)
+ * [Our demo here](https://fetrarij.github.io/ngx-tempusdominus-bootstrap/)
  * [browse our example code](./demo/src/app/) with bootstrap 4
- * Check the branch `bootstrap-3` for bootstrap 3 sources
+ * Check the branch `bootstrap-3` for bootstrap 3 examples
