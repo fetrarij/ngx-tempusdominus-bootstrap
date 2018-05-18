@@ -22,7 +22,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "test": "ng test",
+    "test": "ng test --watch false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ngc": "./node_modules/.bin/ngc -p tsconfig.json",
