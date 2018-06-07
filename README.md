@@ -83,7 +83,7 @@ npm install jquery bootstrap@^3.0.0 moment tempusdominus-core tempusdominus-boot
 # Usage
  Import the `NgTempusdominusBootstrapModule` module in your module. You need `FormsModule` or `ReactiveModule` like all other form:
 ```javascript
-import { NgTempusdominusBootstrapModule } from 'ng-tempusdominus-bootstrap4';
+import { NgTempusdominusBootstrapModule } from 'ngx-tempusdominus-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
