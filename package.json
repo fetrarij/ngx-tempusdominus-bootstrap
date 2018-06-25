@@ -1,7 +1,7 @@
 {
   "name": "ngx-tempusdominus-bootstrap",
   "version": "1.0.0",
-  "description": "Angular2+ directive for tempus dominus bootstrap 4 library.",
+  "description": "Angular2+ directive for tempus dominus bootstrap library.",
   "keywords": [
     "angular2",
     "angular4",
