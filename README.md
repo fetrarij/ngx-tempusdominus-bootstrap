@@ -3,10 +3,10 @@
 
 # About
 This is an angular wrapper for the Bootstrap datetimepicker:  "Tempus Dominus" v5.
-This wrapper will works with bootstrap 3 and with bootstrap 4.
+This wrapper will works with bootstrap 3 and or/with bootstrap 4.
 
 
-This version depends on the current version of tempus dominus bootstrap wich is in development, so this wrapper could have a lot of change in future.
+This version depends on the current version of [tempus dominus bootstrap](https://github.com/tempusdominus/core).
 
 # Installation
 ### Install the directive via npm
@@ -27,7 +27,7 @@ npm install ngx-tempusdominus-bootstrap --save
 
     
 ```
-npm install jquery bootstrap moment tempusdominus-core tempusdominus-bootstrap-4 --save
+npm install jquery bootstrap@4.0.0 moment tempusdominus-core tempusdominus-bootstrap-4 --save
 ```
 <details>
     <summary>
