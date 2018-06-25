@@ -26,7 +26,7 @@ font-awesome@4.7.0
 (OFL-1.1 AND MIT)
 (OFL-1.1 AND MIT)
 
-bootstrap@4.0.0
+bootstrap@4.1.1
 MIT
 The MIT License (MIT)
 
