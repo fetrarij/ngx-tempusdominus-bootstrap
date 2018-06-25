@@ -1,6 +1,6 @@
 {
   "name": "ngx-tempusdominus-bootstrap",
-  "version": "1.0.0-alpha3",
+  "version": "1.0.0",
   "description": "Angular2+ directive for tempus dominus bootstrap 4 library.",
   "keywords": [
     "angular2",
@@ -22,23 +22,24 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "test": "ng test",
+    "test": "ng test --watch false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ngc": "./node_modules/.bin/ngc -p tsconfig.json",
     "build": "ng-packagr -p package.json",
-    "gh-pages": "./node_modules/.bin/ng build --prod --base-href=\"/ng-tempusdominus-bootstrap4/\" && ngh --dir demo/dist/ng-tempusdominus-bootstrap4"
+    "build:demo": "./node_modules/.bin/ng build --prod --base-href=\"/ngx-tempusdominus-bootstrap/\"",
+    "gh-pages": "./node_modules/.bin/ngh --dir  demo/dist/ngx-tempusdominus-bootstrap --repo=https://GH_TOKEN@github.com/fetrarij/ngx-tempusdominus-bootstrap.git"
   },
-  "homepage": "https://github.com/fetrarij/ng-tempusdominus-bootstrap4",
+  "homepage": "https://github.com/fetrarij/ngx-tempusdominus-bootstrap",
   "license": "MIT",
   "author": "Fetrarijaona R.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fetrarij/ng-tempusdominus-bootstrap4.git"
+    "url": "https://github.com/fetrarij/ngx-tempusdominus-bootstrap.git"
   },
   "peerDependencies": {
     "bootstrap": "^3.0.0||^4.0.0",
-    "tempusdominus-core": "^5.0.0-alpha17",
+    "tempusdominus-core": "^5.0.0",
     "jquery": "^3.0",
     "moment": "^2.17",
     "moment-timezone": "^0.5.11"
@@ -79,8 +80,8 @@
     "popper.js": "^1.12.9",
     "protractor": "~5.3.0",
     "rxjs": "^6.0.0",
-    "tempusdominus-bootstrap-4": "^5.0.0-alpha18",
-    "tempusdominus-core": "^5.0.0-alpha17",
+    "tempusdominus-bootstrap-4": "^5.0.0",
+    "tempusdominus-core": "^5.0.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2",
