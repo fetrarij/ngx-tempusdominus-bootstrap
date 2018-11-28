@@ -138,8 +138,13 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
         this.dpinitialized = true;
         this.dpElement.datetimepicker(this.options);
         this.dpElement.on('change.datetimepicker', (e) => {
-            if (e.date !== this.value) {
+            if (e.date && e.date !== this.value) {
                 this.value = e.date || null;
+            } else {
+                const date = moment(e.target.value, this.options.format);
+                if (date.isValid()) {
+                    this.value = date;
+                }
             }
         });
 
