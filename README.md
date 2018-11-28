@@ -27,7 +27,7 @@ npm install ngx-tempusdominus-bootstrap --save
 
     
 ```
-npm install jquery bootstrap@4.0.0 moment tempusdominus-core tempusdominus-bootstrap-4 --save
+npm install jquery bootstrap moment tempusdominus-core tempusdominus-bootstrap-4 --save
 ```
 <details>
     <summary>
@@ -89,7 +89,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     ...
-    FormsMoudle,
+    FormsModule,
     NgTempusdominusBootstrapModule,
     ...
   ]
