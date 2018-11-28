@@ -18,7 +18,9 @@ import {
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 declare var $: any;
-import * as moment from 'moment';
+import * as _moment from 'moment';
+
+const moment = _moment;
 
 
 @Directive({
@@ -30,7 +32,7 @@ import * as moment from 'moment';
 })
 export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy, DoCheck {
 
-    _value: moment.Moment;
+    _value: _moment.Moment;
     private _options: any = {};
     @Input() set options(value) {
       if (value !== null) {
