@@ -81,7 +81,7 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
      */
     @HostListener('document:click', ['$event'])
     outsideClick(event): void {
-        let targetElement: HTMLElement = event?.target;
+        const targetElement: HTMLElement = event?.target;
         if (!targetElement || !this.inputOnly || this.options.inline) {
             return;
         }
