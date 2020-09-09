@@ -16,7 +16,8 @@ import {
     Inject,
     ContentChild
 } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import {NG_VALUE_ACCESSOR} from '@angular/forms';
+
 declare var $: any;
 import * as moment from 'moment';
 
@@ -35,13 +36,15 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
     _value: moment.Moment;
     private _options: any = {};
     @Input() set options(value) {
-      if (value !== null) {
-        this._options = value;
-      }
+        if (value !== null) {
+            this._options = value;
+        }
     }
+
     get options(): any {
         return this._options;
     }
+
     @Output() click: EventEmitter<any> = new EventEmitter<any>();
     private dpinitialized: boolean;
     private inputOnly: boolean;
@@ -67,18 +70,20 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
     @HostListener('blur') onBlur() {
         this._onTouched();
     }
+
     @HostListener('focus') onFocus() {
         if (this.inputOnly) {
             this.dpElement.datetimepicker('toggle');
         }
     }
+
     /**
      * For click outside of input, for input only
      * @param event event object
-     * @param targetElement target element object
      */
-    @HostListener('document:click', ['$event', '$event.target'])
-    outsideClick(event, targetElement: HTMLElement): void {
+    @HostListener('document:click', ['$event'])
+    outsideClick(event): void {
+        const targetElement: HTMLElement = event?.target;
         if (!targetElement || !this.inputOnly || this.options.inline) {
             return;
         }
@@ -128,13 +133,14 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
             this.dpElement.datetimepicker('date', this.value);
         }
     }
+
     setDisabledState(isDisabled: boolean): void {
         if (isDisabled) {
             this.dpElement.datetimepicker('disable');
-          return;
+            return;
         }
         this.dpElement.datetimepicker('enable');
-      }
+    }
 
     ngOnInit(): void {
         this.dpinitialized = true;
@@ -170,38 +176,45 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
     ngOnDestroy(): void {
         this.dpElement.datetimepicker('destroy');
     }
+
     toggle(): void {
         this.dpElement.datetimepicker('toggle');
     }
 }
+
 /**
  * Allows the datepicker to be toggled via click.
  *  */
 @Directive({
     selector: '[NgTempusdominusBootstrapToggle]'
-  })
+})
 export class NgTempusdominusBootstrapToggleDirective {
     @HostBinding('style.cursor') cursor: String = 'pointer';
+
     @HostListener('click') click() {
         this.toggleOpen();
     }
+
     constructor(
         @Inject(forwardRef(() => NgTempusdominusBootstrapDirective)) public tempusDominus,
         elementRef: ElementRef
     ) {
     }
+
     toggleOpen() {
         this.tempusDominus.toggle();
     }
 }
+
 /**
  * Container
  *  */
 @Directive({
     selector: '[NgTempusdominusBootstrap]'
 })
-export class NgTempusdominusBootstrapDirective  {
+export class NgTempusdominusBootstrapDirective {
     @ContentChild(NgTempusdominusBootstrapInputDirective) private _input: NgTempusdominusBootstrapInputDirective;
+
     /**
      * For click outside of container,
      * @param event event object
@@ -221,6 +234,7 @@ export class NgTempusdominusBootstrapDirective  {
 
     constructor(private el: ElementRef) {
     }
+
     toggle() {
         this._input.toggle();
     }
