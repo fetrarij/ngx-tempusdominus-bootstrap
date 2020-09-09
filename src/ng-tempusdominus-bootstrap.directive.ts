@@ -21,6 +21,8 @@ import {NG_VALUE_ACCESSOR} from '@angular/forms';
 declare var $: any;
 import * as moment from 'moment';
 
+const _moment = moment;
+
 
 @Directive({
     selector: '[NgTempusdominusBootstrapInput]',
@@ -147,7 +149,7 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
             if (e.date && e.date !== this.value) {
                 this.value = e.date || null;
             } else {
-                const date = moment(e.target.value, this.options.format);
+                const date = _moment(e.target.value, this.options.format);
                 if (date.isValid()) {
                     this.value = date;
                 }
