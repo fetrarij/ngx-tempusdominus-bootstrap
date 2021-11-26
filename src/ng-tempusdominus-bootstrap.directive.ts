@@ -151,8 +151,8 @@ export class NgTempusdominusBootstrapInputDirective implements OnInit, OnDestroy
             if (e.date && e.date !== this.value) {
                 this.value = e.date || null;
             } else {
-                const date = _moment(e.target.value, this.options.format);
-                if (date.isValid()) {
+                const date = _moment(e.target.value, this.options.format, this.options.useStrict || false);
+                if (date.isValid() || this.options.keepInvalid) {
                     this.value = date;
                 }
             }
